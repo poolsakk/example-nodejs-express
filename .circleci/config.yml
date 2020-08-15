@@ -33,6 +33,7 @@ jobs:
               docker build -t poolsakk/example-nodejs-express:${CIRCLE_SHA1} .
               docker push poolsakk/example-nodejs-express:latest
               docker push poolsakk/example-nodejs-express:${CIRCLE_SHA1}
+              echo "This is ${CIRCLE_BRANCH}"
             elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
               docker build -t poolsakk/example-nodejs-express:latest .    
               docker push poolsakk/example-nodejs-express:latest
