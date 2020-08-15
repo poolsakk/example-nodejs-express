@@ -36,6 +36,7 @@ jobs:
             elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
               docker build -t poolsakk/example-nodejs-express:latest .    
               docker push poolsakk/example-nodejs-express:latest
+              echo "This is ${CIRCLE_BRANCH}"
             else
               echo "This is ${CIRCLE_BRANCH}"
             fi
